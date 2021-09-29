@@ -30,7 +30,7 @@
              $content .= '<textarea name="your_comments" placeholder="Enter your questions or comments" class="form-control" required></textarea>';
              $content .= '</div>';
 
-             $content .= '<div class="mb-3 g-recaptcha" data-sitekey="6LeQupkcAAAAAOkrKUyEVFmi013vitsl49iplvgw" >';
+             $content .= '<div class="mb-3 g-recaptcha" data-sitekey="key" >';
              $content .= '</div>';
 
              $content .= '<input type="submit" name="simplystickit_form_submit" value="Send Your Information" class="btn btn-md btn-block"  style="  background-color: #f287b4; color: #fff;" />' ;
@@ -67,7 +67,7 @@
             // echo "</pre>";
 
             // $url        = "https://www.google.com/recaptcha/siteverify";
-            // $privatekey = "6LeQupkcAAAAALPQhfmNAx9R_yQzLbluYcQPlTaa";
+            // $privatekey = "key";
             // $response   = file_get_contents($url."?secret-".$privatekey."&response-".$_POST['g-recaptcha-response']."&remoteip".$_SERVER['REMOTE_ADDR'] );
             // $data       = json_decode($response);
 
