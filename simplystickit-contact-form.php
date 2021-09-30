@@ -7,8 +7,6 @@
 
      function simplystickit_contact_form(){
 
-            //  wp_register_script( 'simplystickit_recaptchajs', 'https://www.google.com/recaptcha/api.js', 2, false );
-            //  wp_enqueue_script( 'simplystickit_recaptchajs' );
 
              $content = '';
              $content .= '<h2>Contact Us</h2>';
@@ -51,32 +49,18 @@
       
         if(isset($_POST['simplystickit_form_submit'])){
             //echo "<pre>"; print_r($_POST); echo "</pre>";
-            $name = sanitize_text_field($_POST['your_name']);
-            $email = sanitize_email($_POST['your_email']);
-            $comments = sanitize_textarea_field($_POST['your_comments']);
+            $name       = sanitize_text_field($_POST['your_name']);
+            $email      = sanitize_email($_POST['your_email']);
+            $comments   = sanitize_textarea_field($_POST['your_comments']);
 
-            $to = 'wandumi@questcom.co.za';
-            $subject = 'Contact Form Submission';
-            $message = $comments."<br /> ".$name." <br /> ".$email;
+            $to         = 'wandumi@questcom.co.za';
+            $subject    = 'Contact Form Submission';
+            $message    = $comments."<br /> ".$name." <br /> ".$email;
 
     
             wp_mail($to, $subject, $message);
 
-            // echo "<pre>";
-            //     print_r($message);
-            // echo "</pre>";
-
-            // $url        = "https://www.google.com/recaptcha/siteverify";
-            // $privatekey = "key";
-            // $response   = file_get_contents($url."?secret-".$privatekey."&response-".$_POST['g-recaptcha-response']."&remoteip".$_SERVER['REMOTE_ADDR'] );
-            // $data       = json_decode($response);
-
-            // if(isset($data->success) AND $data->success==true){
-            //     // put the code of php to send the email here
-
-            // } else {
-            //     $CaptureFail = '<div class="alert alert-danger" role="alert">Capture Failed, Please try again</div>';
-            // }
+           
 
         }
      };
